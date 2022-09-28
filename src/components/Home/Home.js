@@ -18,8 +18,8 @@ const Home = () => {
   
     return (
         <div>
-           <Header></Header>
-            <h3 className='today-work'>Select today's Work</h3>
+           {/* <Header></Header> */}
+            {/* <h3 className='today-work'>Select today's Work</h3> */}
         <div  className='home-container'>
             <div className='home-item1'>
                 {
@@ -31,7 +31,7 @@ const Home = () => {
             </div>
             <div className='home-item2'>
                 <Cart>
-                    
+
                 </Cart>
             </div>
         </div>

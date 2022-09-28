@@ -1,0 +1,52 @@
+.cart-container{
+    width: 100%;
+    padding: 10px;
+}
+.cart-item1{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.cart-images{
+    width: 60px;
+    border-radius: 50%;
+}
+.cart-info{
+    margin-left: 20px;
+}
+.location{
+    color: gray;
+    font-weight: 400;
+}
+/* Details start */
+.Details-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: lightgray;
+    border-radius: 10px;
+}
+.item-kg {
+    color: gray;
+    font-size: 12px;
+}
+.item-yr{
+    color: gray;
+    font-size: 12px;
+}
+.weight{
+    color: gray;
+    font-weight: 500;
+    margin-top: 0;
+}
+.height{
+    color: gray;
+    font-weight: 500;
+    margin-top: 0;
+}
+.age{
+    color: gray;
+    font-weight: 500;
+    margin-top: 0;
+}
+/* Details ends */
