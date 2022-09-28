@@ -1,6 +1,7 @@
 import React from 'react';
 import './Home.css'
 import { useEffect, useState } from 'react';
+import Banner from '../Banner/Banner';
 
 const Home = () => {
     const [exasize, setExasize]=useState([])
@@ -8,7 +9,7 @@ const Home = () => {
     useEffect(()=>{
       fetch('fakeData.json') 
       .then(res => res.json())
-      .then(data => console.log(data))
+      .then(data => setExasize(data))
   
   
     },[])
@@ -17,7 +18,12 @@ const Home = () => {
         <div  className='home-container'>
             <div className='home-item1'>
                <h2>Cart body</h2>
-
+                {
+                    exasize.map(ex => <Banner
+                    ex={ex}
+                    key={ex.id}
+                    ></Banner>)
+                }
             </div>
             <div className='home-item2'>
                 <h3>Exersize Summary</h3>
