@@ -1,8 +1,12 @@
 import React from 'react';
 import './Cart.css'
 import img from "../../image/120348870_211758073664374_7834001204268795183_n.jpg"
+import { ToastContainer, toast } from 'react-toastify';
 
 const Cart = ({timeAdd}) => {
+const handleAddToash=()=>{
+  toast("Congratulations you are done with your activity!");
+}
    
     return (
         <div className='cart-container'>
@@ -58,7 +62,8 @@ const Cart = ({timeAdd}) => {
             {/* Exercise detail end */}
             {/* Button start */}
             <div className='activity-content'>
-              <button className='activity-btn'>Activity Completed</button>
+              <button onClick={handleAddToash} className='activity-btn'>Activity Completed</button>
+              <ToastContainer />
             </div>
             {/* Button end */}
         </div>
