@@ -3,7 +3,7 @@ import './Cart.css'
 import img from "../../image/120348870_211758073664374_7834001204268795183_n.jpg"
 
 const Cart = ({timeAdd}) => {
-
+   
     return (
         <div className='cart-container'>
              {/* location */}

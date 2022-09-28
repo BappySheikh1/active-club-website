@@ -10,11 +10,11 @@ const Home = () => {
 
     useEffect(()=>{
       fetch('fakeData.json') 
-      .then(res => res.json())
+      .then(res => res?.json())
       .then(data => setExasize(data))
     },[])
 
-    const handleAddToList=([ex])=>{
+    const handleAddToList=(ex)=>{
          
         console.log('clicked',ex)
         
@@ -27,7 +27,7 @@ const Home = () => {
                 {
                     exasize.map(ex => <Banner
                     ex={ex}
-                    key={ex.id}
+                    key={ex?.id}
                     handleAddToList={handleAddToList}
                     ></Banner>)
                 }

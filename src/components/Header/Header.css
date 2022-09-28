@@ -1,4 +1,25 @@
-.header-name{
+.header-container{
+    background-color: rgb(8, 8, 15);
+    padding: 10px;
+    height: 70px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding-left: 100px;
-    color: blue;
+    padding-right: 100px;
+}
+.header-link a{
+ text-decoration: none;
+ color: white;
+ margin-right: 20px;
+ font-size: 17px;
+}
+.header-link a:hover{
+color: orangered;
+}
+@media screen and (max-width:900px) {
+    .header-link a{
+        display: none;
+    }
 }

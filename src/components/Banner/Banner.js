@@ -4,7 +4,7 @@ import './Banner.css'
 const Banner = ({ex,handleAddToList}) => {
   
     const {img,name,Time,age}=ex
-   
+ 
     return (    
         <div className='banner-container'>
           <img className='banner-img' src={img} alt="" />
@@ -14,7 +14,7 @@ const Banner = ({ex,handleAddToList}) => {
             <p>Time required: {Time}m</p>
             
           </div>
-            <button onClick={()=>handleAddToList([ex])} className='btn-addToList'>
+            <button onClick={()=>handleAddToList(ex)} className='btn-addToList'>
                 Add To List
             </button>
         </div>
