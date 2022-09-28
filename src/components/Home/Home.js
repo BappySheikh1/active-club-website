@@ -15,8 +15,11 @@ const Home = () => {
     },[])
 
     const handleAddToList=(ex)=>{
-         
-        console.log('clicked',ex)
+      let newArr=[];
+      newArr.push(ex)
+      const setTimeVlaue=(previous,current)=> previous + current.Time
+      const newTime= newArr.reduce(setTimeVlaue,0)
+      console.log(newTime)        
         
       }
   
