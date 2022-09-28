@@ -13,14 +13,11 @@
     padding-left: 100px;
     padding-right: 10px;
     margin-top: 20px;
-   background: lightblue;
 }
 
-
-@media screen and (max-width:1000) {
-    .home-item1{
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-    }
-    
+@media screen and (max-width:1300px) {
+.home-item1{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}    
 }

@@ -2,7 +2,8 @@ import React from 'react';
 import './Cart.css'
 import img from "../../image/120348870_211758073664374_7834001204268795183_n.jpg"
 
-const Cart = () => {
+const Cart = ({timeAdd}) => {
+
     return (
         <div className='cart-container'>
              {/* location */}
@@ -46,7 +47,7 @@ const Cart = () => {
             <div className='Exercise-details'>
                 <div className='exercise-info'>
                    <h4>Exercise time</h4>
-                   <p className='exercise-item'>0 minutes</p>
+                   <p className='exercise-item'>{timeAdd} minutes</p>
                 </div>
                 <div className='exercise-info2'>
                   <h4>Break time</h4>

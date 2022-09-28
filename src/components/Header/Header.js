@@ -4,7 +4,13 @@ import './Header.css'
 const Header = () => {
     return (
         <div>
-            <h2 className='header-name'>ULTRA-ACTIVE-CLUB</h2>
+            <h2>My Regular Club</h2>
+            <div>
+                <a href=""></a>
+                <a href=""></a>
+                <a href=""></a>
+                <a href=""></a>
+            </div>
         </div>
     );
 };
