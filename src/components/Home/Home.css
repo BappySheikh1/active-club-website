@@ -2,6 +2,10 @@
     display: grid;
     grid-template-columns: 3fr 1fr;
 }
+.home-item1{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
 .home-item2{
     background-color: bisque;
 }

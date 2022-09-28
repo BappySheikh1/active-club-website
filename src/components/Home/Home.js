@@ -16,8 +16,9 @@ const Home = () => {
   
     return (
         <div  className='home-container'>
+            
             <div className='home-item1'>
-               <h2>Cart body</h2>
+               
                 {
                     exasize.map(ex => <Banner
                     ex={ex}
