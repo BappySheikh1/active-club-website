@@ -2,7 +2,6 @@ import React from 'react';
 import './Home.css'
 import { useEffect, useState } from 'react';
 import Banner from '../Banner/Banner';
-import Header from '../Header/Header';
 import Cart from '../Cart/Cart';
 
 const Home = () => {

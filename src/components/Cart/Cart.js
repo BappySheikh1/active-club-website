@@ -17,22 +17,49 @@ const Cart = () => {
             {/* Detail */}
             <div className='Details-container'>
                    <div className=''>
-                     <h3>76<span className='item-kg'>kg</span>
-                     <p className='weight'>Weight</p>
+                     <h3>76<span className='item'>kg</span>
+                     <p className='items'>Weight</p>
                      </h3>
                    </div>
                    <div>
                      <h3>5.10
-                     <p className='height'>Height</p>
+                     <p className='items'>Height</p>
                      </h3>
                    </div>
                    <div>
-                     <h3>20<span className='item-yr'>yr</span>
-                     <p className='age'>Age</p>
+                     <h3>20<span className='item'>yrs</span>
+                     <p className='items'>Age</p>
                      </h3>
                    </div>
 
             </div>
+
+            <h3>Add A Break</h3>
+            <div className='Break-container'>
+                <h3 className='break-item'>10s</h3>
+                <h3 className='break-item'>20s</h3>
+                <h3 className='break-item'>30s</h3>
+                <h3 className='break-item'>40s</h3>
+            </div>
+            {/* Exercise detail start */}
+            <h3>Exercise Details</h3>
+            <div className='Exercise-details'>
+                <div className='exercise-info'>
+                   <h4>Exercise time</h4>
+                   <p className='exercise-item'>0 minutes</p>
+                </div>
+                <div className='exercise-info2'>
+                  <h4>Break time</h4>
+                   <p className='exercise-item'>0 minutes</p>
+                </div>
+
+            </div>
+            {/* Exercise detail end */}
+            {/* Button start */}
+            <div className='activity-content'>
+              <button className='activity-btn'>Activity Completed</button>
+            </div>
+            {/* Button end */}
         </div>
     );
 };
