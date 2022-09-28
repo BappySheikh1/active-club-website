@@ -2,6 +2,8 @@ import React from 'react';
 import './Home.css'
 import { useEffect, useState } from 'react';
 import Banner from '../Banner/Banner';
+import Header from '../Header/Header';
+import Cart from '../Cart/Cart';
 
 const Home = () => {
     const [exasize, setExasize]=useState([])
@@ -15,10 +17,11 @@ const Home = () => {
     },[])
   
     return (
+        <div>
+           <Header></Header>
+            <h3 className='today-work'>Select today's Work</h3>
         <div  className='home-container'>
-            
             <div className='home-item1'>
-               
                 {
                     exasize.map(ex => <Banner
                     ex={ex}
@@ -27,9 +30,11 @@ const Home = () => {
                 }
             </div>
             <div className='home-item2'>
-                <h3>Exersize Summary</h3>
+                <Cart>
+                    
+                </Cart>
             </div>
-            
+        </div>
         </div>
     );
 };

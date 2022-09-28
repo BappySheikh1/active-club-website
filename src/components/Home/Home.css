@@ -1,11 +1,23 @@
+.today-work{
+    padding-left: 100px;
+}
 .home-container{
     display: grid;
     grid-template-columns: 3fr 1fr;
+    
 }
 .home-item1{
     display: grid;
     grid-template-columns: repeat(3,1fr);
+    grid-gap: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-top: 20px;
 }
 .home-item2{
     background-color: bisque;
+   position: fixed;
+   right: 0;
+   top: 0;
+   
 }
