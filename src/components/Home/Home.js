@@ -6,7 +6,8 @@ import Cart from '../Cart/Cart';
 
 const Home = () => {
     const [exasize, setExasize]=useState([]);
-    const[timeAdd,setTimeAdd]=useState([]);
+    const[timeAdd,setTimeAdd]=useState([0]);
+    const [addBreak,setBreak]=useState([])
 
     useEffect(()=>{
       fetch('fakeData.json') 
@@ -15,11 +16,11 @@ const Home = () => {
     },[])
 
     const handleAddToList=(ex)=>{
-      let newArr=[];
-      newArr.push(ex)
-      const setTimeVlaue=(previous,current)=> previous + current.Time
-      const newTime= newArr.reduce(setTimeVlaue,0)
-      console.log(newTime)        
+        const time =timeAdd + ex.Time
+        const parseString=parseFloat(time)
+      setTimeAdd(parseString)
+    
+    // console.log(ex) 
         
       }
   
