@@ -7,7 +7,7 @@ import Cart from '../Cart/Cart';
 const Home = () => {
     const [exasize, setExasize]=useState([]);
     const[timeAdd,setTimeAdd]=useState([0]);
-    const [addBreak,setBreak]=useState([])
+    const [addBreak,setBreak]=useState([0]);
 
     useEffect(()=>{
       fetch('fakeData.json') 
@@ -39,9 +39,9 @@ const Home = () => {
             <div className='home-item2'>
                 <Cart 
                   timeAdd={timeAdd}
-                  >
-
-                </Cart>
+                  addBreak={addBreak}
+                  setBreak={setBreak}
+                  ></Cart>
             </div>
         </div>
         

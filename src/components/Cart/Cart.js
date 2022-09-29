@@ -3,11 +3,18 @@ import './Cart.css'
 import img from "../../image/120348870_211758073664374_7834001204268795183_n.jpg"
 import { ToastContainer, toast } from 'react-toastify';
 
-const Cart = ({timeAdd}) => {
+const Cart = ({timeAdd,addBreak,setBreak}) => {
+  // Activity toast start
 const handleAddToash=()=>{
   toast("Congratulations you are done with your activity!");
 }
-   
+  // Activity toast end
+  const handleAddToList =(breakTime)=>{
+    const add = breakTime;
+    setBreak(add)
+  }
+ 
+  
     return (
         <div className='cart-container'>
              {/* location */}
@@ -41,10 +48,10 @@ const handleAddToash=()=>{
 
             <h3>Add A Break</h3>
             <div className='Break-container'>
-                <h3 className='break-item'>10s</h3>
-                <h3 className='break-item'>20s</h3>
-                <h3 className='break-item'>30s</h3>
-                <h3 className='break-item'>40s</h3>
+                <h3 onClick={()=>handleAddToList(10)} className='break-item'>10s</h3>
+                <h3 onClick={()=>handleAddToList(20)} className='break-item'>20s</h3>
+                <h3 onClick={()=>handleAddToList(30)} className='break-item'>30s</h3>
+                <h3 onClick={()=>handleAddToList(40)} className='break-item'>40s</h3>
             </div>
             {/* Exercise detail start */}
             <h3>Exercise Details</h3>
@@ -55,7 +62,7 @@ const handleAddToash=()=>{
                 </div>
                 <div className='exercise-info2'>
                   <h4>Break time</h4>
-                   <p className='exercise-item'>0 minutes</p>
+                   <p className='exercise-item'>{addBreak} minutes</p>
                 </div>
 
             </div>
