@@ -7,7 +7,7 @@ import Cart from '../Cart/Cart';
 const Home = () => {
     const [activities, setActivities]=useState([]);
     const[timeAdd,setTimeAdd]=useState([0]);
-    const [addBreak,setBreak]=useState([0]);
+    const [addBreak,setAddBreak]=useState([0]);
 
     useEffect(()=>{
       fetch('fakeData.json') 
@@ -19,11 +19,9 @@ const Home = () => {
         const time =timeAdd + activity.Time
         const parseString=parseFloat(time)
       setTimeAdd(parseString)
-    
-    // console.log(ex) 
-        
       }
-  
+
+
     return (
 
         <div  className='home-container'>
@@ -40,7 +38,7 @@ const Home = () => {
                 <Cart 
                   timeAdd={timeAdd}
                   addBreak={addBreak}
-                  setBreak={setBreak}
+                  setAddBreak={setAddBreak}
                   ></Cart>
             </div>
         </div>

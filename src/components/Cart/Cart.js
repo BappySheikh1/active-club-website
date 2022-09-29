@@ -7,7 +7,7 @@ import { faLocationDot} from '@fortawesome/free-solid-svg-icons'
 
 
 
-const Cart = ({timeAdd,addBreak,setBreak}) => {
+const Cart = ({timeAdd,addBreak,setAddBreak}) => {
   // Activity toast start
 const handleAddToast=()=>{
   toast("Congratulations you are done with your activity!");
@@ -19,7 +19,7 @@ const handleAddToast=()=>{
     const add = breakTime;
    const display= localStorage.getItem('Bookmark') ? localStorage.getItem('Bookmark') : breakTime
     
-   setBreak(add,display)
+   setAddBreak(add,display)
     localStorage.setItem('Bookmark',breakTime)
   }
    
