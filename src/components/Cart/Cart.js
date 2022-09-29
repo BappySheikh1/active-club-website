@@ -16,10 +16,10 @@ const handleAddToast=()=>{
 
 
   const handleAddToList =(breakTime)=>{
-    const add = breakTime;
-   const display= localStorage.getItem('Bookmark') ? localStorage.getItem('Bookmark') : breakTime
+  
+ 
     
-   setAddBreak(add,display)
+   setAddBreak(breakTime)
     localStorage.setItem('Bookmark',breakTime)
   }
    
@@ -71,7 +71,7 @@ const handleAddToast=()=>{
                 </div>
                 <div className='exercise-info2'>
                   <h4>Break time</h4>
-                   <p className='exercise-item'>{addBreak} minutes</p>
+                   <p className='exercise-item'>{  localStorage.getItem('Bookmark') ? localStorage.getItem('Bookmark') : addBreak} minutes</p>
                 </div>
 
             </div>
