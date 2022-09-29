@@ -5,13 +5,18 @@ import { ToastContainer, toast } from 'react-toastify';
 
 const Cart = ({timeAdd,addBreak,setBreak}) => {
   // Activity toast start
-const handleAddToash=()=>{
+const handleAddToast=()=>{
   toast("Congratulations you are done with your activity!");
 }
   // Activity toast end
   const handleAddToList =(breakTime)=>{
     const add = breakTime;
     setBreak(add)
+   const display =localStorage.getItem('Bookmark')
+    
+   
+    localStorage.setItem('Bookmark',breakTime)
+    
   }
  
   
@@ -69,7 +74,7 @@ const handleAddToash=()=>{
             {/* Exercise detail end */}
             {/* Button start */}
             <div className='activity-content'>
-              <button onClick={handleAddToash} className='activity-btn'>Activity Completed</button>
+              <button onClick={handleAddToast} className='activity-btn'>Activity Completed</button>
               <ToastContainer />
             </div>
             {/* Button end */}

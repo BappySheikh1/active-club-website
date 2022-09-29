@@ -3,7 +3,7 @@ import './Question.css'
 
 const Question = () => {
     return (
-        <div>
+        <div className='question-container'>
            <h3 className='question1'>
             Question-1:-React জিনিস টা কিভাবে কাজ করে?
             <p className='question-items'>
