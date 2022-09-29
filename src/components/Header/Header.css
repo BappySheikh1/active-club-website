@@ -9,6 +9,10 @@
     padding-left: 100px;
     padding-right: 100px;
 }
+.icon-dumble{
+    margin-right: 10px;
+    color: rgb(224, 210, 9);
+}
 .header-link a{
  text-decoration: none;
  color: white;

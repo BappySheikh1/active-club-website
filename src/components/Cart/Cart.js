@@ -2,6 +2,10 @@ import React from 'react';
 import './Cart.css'
 import img from "../../image/120348870_211758073664374_7834001204268795183_n.jpg"
 import { ToastContainer, toast } from 'react-toastify';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLocationDot} from '@fortawesome/free-solid-svg-icons'
+
+
 
 const Cart = ({timeAdd,addBreak,setBreak}) => {
   // Activity toast start
@@ -27,7 +31,7 @@ const handleAddToast=()=>{
                 <img className='cart-images' src={img} alt="" />
                 <div className='cart-info'>
                     <h5>Bappy Sheikh <br />
-                    <span className='location'>Narail,Bangladesh</span>
+                    <span className='location'><FontAwesomeIcon icon={faLocationDot} /> Narail,Bangladesh</span>
                     </h5>
                 </div>
             </div>
