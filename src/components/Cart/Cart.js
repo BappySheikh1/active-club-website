@@ -13,16 +13,16 @@ const handleAddToast=()=>{
   toast("Congratulations you are done with your activity!");
 }
   // Activity toast end
+
+
   const handleAddToList =(breakTime)=>{
     const add = breakTime;
-    setBreak(add)
-   const display =localStorage.getItem('Bookmark')
+   const display= localStorage.getItem('Bookmark') ? localStorage.getItem('Bookmark') : breakTime
     
-   
+   setBreak(add,display)
     localStorage.setItem('Bookmark',breakTime)
-    
   }
- 
+   
   
     return (
         <div className='cart-container'>
