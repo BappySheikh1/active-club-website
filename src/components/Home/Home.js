@@ -5,18 +5,18 @@ import Banner from '../Banner/Banner';
 import Cart from '../Cart/Cart';
 
 const Home = () => {
-    const [exasize, setExasize]=useState([]);
+    const [activities, setActivities]=useState([]);
     const[timeAdd,setTimeAdd]=useState([0]);
     const [addBreak,setBreak]=useState([0]);
 
     useEffect(()=>{
       fetch('fakeData.json') 
       .then(res => res?.json())
-      .then(data => setExasize(data))
+      .then(data => setActivities(data))
     },[])
 
-    const handleAddToList=(ex)=>{
-        const time =timeAdd + ex.Time
+    const handleAddToList=(activity)=>{
+        const time =timeAdd + activity.Time
         const parseString=parseFloat(time)
       setTimeAdd(parseString)
     
@@ -29,9 +29,9 @@ const Home = () => {
         <div  className='home-container'>
             <div className='home-item1'>
                 {
-                    exasize.map(ex => <Banner
-                    ex={ex}
-                    key={ex?.id}
+                    activities.map(activity => <Banner
+                    activity={activity}
+                    key={activity?.id}
                     handleAddToList={handleAddToList}
                     ></Banner>)
                 }

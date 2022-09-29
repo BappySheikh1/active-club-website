@@ -1,9 +1,9 @@
 import React from 'react';
 import './Banner.css'
 
-const Banner = ({ex,handleAddToList}) => {
+const Banner = ({activity,handleAddToList}) => {
   
-    const {img,name,Time,age}=ex
+    const {img,name,Time,age}=activity
  
     return (    
         <div className='banner-container'>
@@ -14,7 +14,7 @@ const Banner = ({ex,handleAddToList}) => {
             <p>Time required: {Time}m</p>
             
           </div>
-            <button onClick={()=>handleAddToList(ex)} className='btn-addToList'>
+            <button onClick={()=>handleAddToList(activity)} className='btn-addToList'>
                 Add To List
             </button>
         </div>
